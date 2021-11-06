@@ -13,8 +13,8 @@ steps:
 - task: Ant@1
   inputs:
     buildFile: 'build.xml'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
+    options: '-Dsf.username=$(sf.username)-Dsf.password=$(sf.password)-Dsf.sessionId=$(sf.sessionId)'
+    targets: 'deploytest'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
