@@ -14,7 +14,6 @@ steps:
   inputs:
     buildFile: 'build.xml'
     options: '-Dsf.username=$(sf.username)-Dsf.password=$(sf.password)-Dsf.sessionId=$(sf.sessionId)'
-    targets: 'deploytest'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
